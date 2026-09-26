@@ -1,0 +1,79 @@
+# ============================================
+#  DyeAuras - colored dyes give effects + trails
+# ============================================
+
+# Where the dye has to be for it to work:
+#   inventory = anywhere in the player's inventory ("has it on them")
+#   hand      = only in main hand or offhand ("wielding it")
+check-mode: inventory
+
+# false = ANY normal dye works (every crafted dye in the game gives buffs)
+# true  = only special "Aura Dyes" from /dyeaura give work
+require-special-dye: false
+
+# How long each effect lasts in ticks (20 ticks = 1 second).
+# It gets refreshed constantly and removed as soon as the dye is gone,
+# so this mostly just needs to be over 200 to stop Night Vision flickering.
+effect-duration-ticks: 300
+
+trail:
+  enabled: true
+  particles-per-color: 3
+  size: 1.2
+
+# Each dye color: which effect it gives and what level.
+# level 1 = Speed I, level 2 = Speed II, etc.
+# Effect names: https://minecraft.wiki/w/Effect (use the ID, e.g. jump_boost)
+# Optional: particle-color: "#FF8800" to override the trail color.
+# Set enabled: false to turn a dye off.
+dyes:
+  orange:
+    effect: strength
+    level: 2
+  blue:
+    effect: speed
+    level: 2
+  pink:
+    effect: resistance
+    level: 1
+  # ---- placeholders below, change these to whatever your friend wants ----
+  white:
+    effect: slow_falling
+    level: 1
+  light_gray:
+    effect: water_breathing
+    level: 1
+  gray:
+    effect: night_vision
+    level: 1
+  black:
+    effect: invisibility
+    level: 1
+  brown:
+    effect: hero_of_the_village
+    level: 1
+  red:
+    effect: fire_resistance
+    level: 1
+  yellow:
+    effect: haste
+    level: 2
+  lime:
+    effect: jump_boost
+    level: 2
+  green:
+    effect: luck
+    level: 1
+  cyan:
+    effect: dolphins_grace
+    level: 1
+  light_blue:
+    effect: conduit_power
+    level: 1
+  purple:
+    effect: regeneration
+    level: 1
+  magenta:
+    effect: regeneration
+    level: 2
+    particle-color: "#FF4FD8"

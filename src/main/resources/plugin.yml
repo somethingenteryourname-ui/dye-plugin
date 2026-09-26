@@ -1,0 +1,16 @@
+name: DyeAuras
+version: '${project.version}'
+main: dev.dyeauras.DyeAurasPlugin
+api-version: '1.21'
+description: Colored dyes give potion effects and leave an aura trail.
+
+commands:
+  dyeaura:
+    description: DyeAuras commands
+    usage: /dyeaura <give|list|reload>
+    aliases: [dyeauras]
+
+permissions:
+  dyeaura.admin:
+    description: Use /dyeaura give and /dyeaura reload
+    default: op
